@@ -20,6 +20,7 @@ class Header extends Component {
                         </a>
                     </li>
                 </ul>
+                
 
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
@@ -27,7 +28,7 @@ class Header extends Component {
                             Sign Up
                         </a>
                     </li>
-                    
+
                     <li className="nav-item">
                         <a className="nav-link" href="login.html">
                             Login
