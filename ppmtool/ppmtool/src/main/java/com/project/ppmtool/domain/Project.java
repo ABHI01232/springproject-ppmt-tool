@@ -1,6 +1,7 @@
 package com.project.ppmtool.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 import javax.persistence.*;
@@ -33,6 +34,12 @@ public class Project {
     private Date created_At;
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date updated_At;
+
+    //creating relation with backlog entity
+    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL,mappedBy = "project")
+    private Backlog backlog;
+
+
 
     @PrePersist
     protected void onCreate()
@@ -122,5 +129,13 @@ public class Project {
 
     public void setUpdated_At(Date updated_At) {
         this.updated_At = updated_At;
+    }
+
+    public void setBacklog(Backlog backlog) {
+        this.backlog = backlog;
+    }
+
+    public Backlog getBacklog() {
+        return backlog;
     }
 }
