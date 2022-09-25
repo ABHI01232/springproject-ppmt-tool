@@ -37,6 +37,7 @@ public class Project {
 
     //creating relation with backlog entity
     @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL,mappedBy = "project")
+    @JsonIgnore
     private Backlog backlog;
 
 
