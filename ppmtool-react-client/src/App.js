@@ -9,7 +9,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import UpdateProject from "./components/Project/UpdateProject";
 import ProjectBoard from "./components/ProjectBoard/ProjectBoard";
-import AddProjectTask from "./components/ProjectTasks/AddProjectTask";
+import AddProjectTask from "./components/ProjectBoard/ProjectTasks/AddProjectTask";
 
 class App extends Component {
   render() {
