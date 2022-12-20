@@ -28,7 +28,7 @@ class ProjectTask extends Component {
           ID: {project_task.projectSequence} -- Priority: {priorityString}
         </div>
         <div className="card-body bg-light">
-          <h5 className="card-title">project_task.summary</h5>
+          <h5 className="card-title">{project_task.summary}</h5>
           <p className="card-text text-truncate ">
             {project_task.acceptanceCriteria}
           </p>
