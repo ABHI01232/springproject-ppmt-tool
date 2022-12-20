@@ -81,4 +81,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { getBacklog }
-)(ProjectBoard);
+)(ProjectBoard); 
