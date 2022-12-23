@@ -43,7 +43,7 @@ import ProjectTask from "./ProjectTasks/ProjectTask";
                 {
                   // <!-- SAMPLE PROJECT TASK STARTS HERE -->
                 }
-                <div className="card mb-1 bg-light">
+                {/* <div className="card mb-1 bg-light">
                   <div className="card-header text-primary">
                     ID: projectSequence -- Priority: priorityString
                   </div>
@@ -59,7 +59,7 @@ import ProjectTask from "./ProjectTasks/ProjectTask";
                     <button className="btn btn-danger ml-4">Delete</button>
                   </div>
                 </div>
-  
+   */}
                 {
                   // <!-- SAMPLE PROJECT TASK ENDS HERE -->
                 }
