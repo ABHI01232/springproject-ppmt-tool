@@ -54,6 +54,7 @@ class AddProjectTask extends Component {
   render() {
     const { id } = this.props.match.params;
     const { errors } = this.state;
+    
     return (
       <div className="add-PBI">
         <div className="container">
@@ -63,7 +64,8 @@ class AddProjectTask extends Component {
                 Back to Project Board
               </Link>
               <h4 className="display-4 text-center">Add Project Task</h4>
-              <p className="lead text-center">Project Name + Project Code</p>
+              <p className="lead text-center">Project Code:{" "}
+                {this.state.projectIdentifier}{" "}</p>
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                   <input
