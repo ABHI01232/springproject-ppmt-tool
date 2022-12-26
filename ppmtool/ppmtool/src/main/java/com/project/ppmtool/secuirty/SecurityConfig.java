@@ -36,6 +36,7 @@ private JwtAuthenticationEntryPoint unauthorizedEntry;
                         "/**/*.css",
                         "/**/*.js"
                 ).permitAll()
+                .antMatchers("/api/users/**").permitAll()
                 .anyRequest().authenticated();
     }
 }
