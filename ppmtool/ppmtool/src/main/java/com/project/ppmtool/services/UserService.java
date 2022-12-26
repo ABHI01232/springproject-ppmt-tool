@@ -29,6 +29,7 @@ public class UserService {
             newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
             //username has  to be unique exception
             newUser.setUsername(newUser.getUsername());
+            newUser.setConfirmPassword("");
             return userRepository.save(newUser);
         }
         catch (Exception e){
