@@ -39,22 +39,26 @@ public class ProjectController {
         return new ResponseEntity<Project>(project1, HttpStatus.CREATED);
     }
 
+
     @GetMapping("/{id}")
-    public ResponseEntity<?> findById( @PathVariable String id)
+    public ResponseEntity<?> findById( @PathVariable String id,Principal principal)
     {
-        Project fetchedProject = projectService.findById(id);
+        Project fetchedProject = projectService.findById(id,principal.getName());
         return new ResponseEntity<Project>(fetchedProject,HttpStatus.OK);
     }
 
+
     @GetMapping("/all")
-    public Iterable<Project> findAll()
+    public Iterable<Project> findAll(Principal principal)
     {
-        return projectService.findAll();
+        return projectService.findAll(principal.getName());
     }
 
+
+
     @DeleteMapping("/{projectId}")
-    public ResponseEntity<?> deleteProject(@PathVariable String projectId){
-        projectService.deleteProjectById(projectId);
+    public ResponseEntity<?> deleteProject(@PathVariable String projectId,Principal principal){
+        projectService.deleteProjectById(projectId,principal.getName());
 
         return new ResponseEntity<String>("Project with ID: '"+projectId+"' was deleted", HttpStatus.OK);
     }
